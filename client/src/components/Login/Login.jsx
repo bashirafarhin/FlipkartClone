@@ -35,6 +35,9 @@ const ButtonLogin = styled(Button)`
  color : #fff;
  height : 48px;
  border-radius : 2px;
+ &:hover {
+  opacity : 1;
+ }
 `
 const ButtonRequestOTP = styled(Button)`
  text-transform : none;
@@ -73,7 +76,6 @@ const accountInitialValues = {
 const TypographyError = styled(Typography)`
  font-size : 12px;
  color : #ff6161;
- line-height : 0;
  margin-top : 10px;
  font-weight : 600;
 `
