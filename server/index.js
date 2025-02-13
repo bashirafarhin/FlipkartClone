@@ -1,0 +1,47 @@
+import express from 'express';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
+import fileUpload from 'express-fileupload';
+import errorMiddleware from './middlewares/error.middleware.js'
+import cors from 'cors';
+import env from 'dotenv';
+env.config();
+const app = express();
+
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.json());
+app.use(cookieParser());
+app.set("trust proxy", 1);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(fileUpload({ useTempFiles: true, tempFileDir: "/tmp/" }));
+app.use(cors({credentials: true, origin: true, withCredentials: true }));
+
+import user from './routes/user.route.js';
+import product from './routes/product.route.js';
+import order from './routes/order.route.js';
+import payment from './routes/payment.route.js';
+
+app.use('/api/v1', user);
+app.use('/api/v1', product);
+app.use('/api/v1', order); 
+app.use('/api/v1', payment);
+app.use(errorMiddleware);
+
+// deployment
+// if (process.env.NODE_ENV === 'production') {
+//     app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+//     app.get('*', (req, res) => {
+//         res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+//     });
+// } else {
+//     app.get('/', (req, res) => {
+//           res.send('server on');
+//     });
+// }
+
+export default app;
