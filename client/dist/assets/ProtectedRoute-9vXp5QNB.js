@@ -1,0 +1,1 @@
+import{j as t,N as e}from"./index-CdWlI4-n.js";import{u as a}from"./useSelector-C-eu2dyD.js";const m=({children:r,isAdmin:o})=>{const{loading:s,isAuthenticated:i,user:n}=a(u=>u.user);return s?null:i?o&&n.role!=="admin"?t.jsx(e,{to:"/login"}):r:t.jsx(e,{to:"/login"})};export{m as default};

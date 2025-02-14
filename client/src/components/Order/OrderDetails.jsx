@@ -62,7 +62,7 @@ const OrderDetails = () => {
 
                                             <div className="flex flex-col sm:flex-row sm:w-1/2 gap-2">
                                                 <div className="w-full sm:w-32 h-20">
-                                                    <img draggable="false" className="h-full w-full object-contain" src={image} alt={name} />
+                                                    <img loading="lazy" draggable="false" className="h-full w-full object-contain" src={image} alt={name} />
                                                 </div>
                                                 <div className="flex flex-col gap-1 overflow-hidden">
                                                     <p className="text-sm">{name.length > 60 ? `${name.substring(0, 60)}...` : name}</p>

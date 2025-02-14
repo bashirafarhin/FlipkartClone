@@ -16,7 +16,7 @@ const Product = (props) => {
     return (
         <div className="flex gap-4 border-b p-4 sm:pb-8 w-full group overflow-hidden">
             <div className="w-1/6 h-28 flex-shrink-0">
-                <img draggable="false" className="h-full w-full object-contain" src={image} alt={name} />
+                <img loading="lazy" draggable="false" className="h-full w-full object-contain" src={image} alt={name} />
             </div>
 
             {/* <!-- description --> */}

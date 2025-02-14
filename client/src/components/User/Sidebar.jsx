@@ -30,7 +30,7 @@ const Sidebar = ({ activeTab }) => {
             <div className="flex items-center gap-4 p-3 bg-white rounded-md shadow">
                 {/* <!-- user icon --> */}
                 <div className="w-12 h-12 rounded-full hidden  sm:block ">
-                    <img draggable="false" className=" h-full w-full object-cover rounded-full" src={user.avatar.url} alt="Avatar" />
+                    <img loading="lazy" draggable="false" className=" h-full w-full object-cover rounded-full" src={user.avatar.url} alt="Avatar" />
                 </div>
                 {/* <!-- user icon --> */}
                 <div className="flex flex-col gap-1">

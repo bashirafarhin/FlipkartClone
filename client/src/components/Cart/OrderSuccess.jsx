@@ -31,6 +31,7 @@ const OrderSuccess = ({ success }) => {
         {/* <!-- row --> */}
         <div className="flex flex-col gap-2 items-center justify-center sm:w-4/6 sm:mt-4 m-auto mb-7 bg-white shadow rounded p-6 pb-12">
           <img
+            loading="lazy"
             draggable="false"
             className="w-1/2 h-60 object-contain"
             src={success ? successfull : failed}

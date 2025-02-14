@@ -36,7 +36,7 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
             <Link to={`/product/${product}`} className="flex flex-col sm:flex-row gap-5 items-stretch w-full group">
                 {/* <!-- product image --> */}
                 <div className="w-full sm:w-1/6 h-28 flex-shrink-0">
-                    <img draggable="false" className="h-full w-full object-contain" src={image} alt={name} />
+                    <img loading="lazy" draggable="false" className="h-full w-full object-contain" src={image} alt={name} />
                 </div>
                 {/* <!-- product image --> */}
 

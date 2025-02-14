@@ -144,7 +144,7 @@ const ProductDetails = () => {
                                     <div className="w-full h-full pb-6 border relative">
                                         <Slider {...settings}>
                                             {product.images && product.images.map((item, i) => (
-                                                <img draggable="false" className="w-full h-96 object-contain" src={item.url} alt={product.name} key={i} />
+                                                <img loading="lazy" draggable="false" className="w-full h-96 object-contain" src={item.url} alt={product.name} key={i} />
                                             ))}
                                         </Slider>
                                         <div className="absolute top-4 right-4 shadow-lg bg-white w-9 h-9 border flex items-center justify-center rounded-full">
@@ -210,7 +210,7 @@ const ProductDetails = () => {
 
                                     {/* <!-- warranty & brand --> */}
                                     <div className="flex gap-8 mt-2 items-center text-sm">
-                                        <img draggable="false" className="w-20 h-8 p-0.5 border object-contain" src={product.brand?.logo.url} alt={product.brand && product.brand.name} />
+                                        <img loading="lazy" draggable="false" className="w-20 h-8 p-0.5 border object-contain" src={product.brand?.logo.url} alt={product.brand && product.brand.name} />
                                         <span>{product.warranty} Year Warranty <Link className="font-medium text-primary-blue" to="/">Know More</Link></span>
                                     </div>
                                     {/* <!-- warranty & brand --> */}
@@ -266,7 +266,7 @@ const ProductDetails = () => {
 
                                     {/* <!-- flipkart plus banner --> */}
                                     <div className="sm:w-1/2 mt-4 border">
-                                        <img draggable="false" className="w-full h-full object-contain" src="https://rukminim1.flixcart.com/lockin/763/305/images/promotion_banner_v2_active.png" alt="" />
+                                        <img loading="lazy" draggable="false" className="w-full h-full object-contain" src="https://rukminim1.flixcart.com/lockin/763/305/images/promotion_banner_v2_active.png" alt="" />
                                     </div>
                                     {/* <!-- flipkart plus banner --> */}
 

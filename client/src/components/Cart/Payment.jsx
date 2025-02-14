@@ -135,6 +135,7 @@ const Payment = () => {
                         label={
                           <div className="flex items-center gap-4">
                             <img
+                              loading="lazy"
                               draggable="false"
                               className="h-6 w-6 object-contain"
                               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAWlBMVEVHcEwzlf8zlf8zlf8zlf8vhcozlf8zlv8zlf8zlf8zlf80mP80mP8zlf80l/8zlf8zlf8zlf8CDzUmdc07q/8GJVMHJlQHJlQFIE0GJVQHJlQHJlQEIk8HJlRFd1ufAAAAHnRSTlMAkjv/qwS+VxDTaCBHhC7kdfkmDBeI6P9Cpr1RZ9dOi+BjAAAA1ElEQVR4AX3RhQHDQAwDQKUKMzu4/5qtS6H/3AAGCbcc3HrQxQ3PJwPYBXwJYRNGfIlgE5PKgVkS8SOFUUalYJIXVNYTHG5KXFVURUSVm7JTGahoWVAkyKlMOUe6uEZJFeOiYdSi6xHRknMQo+6lA1UBk05E6tR6wiAKjiVnbxQ1oaDycDLLx+IZc24m+aqDb1oHi/zBpXpgp17lb0R1zXmUzdJS+diTHa+8Vl3LpodPlRzj24ygqrC3ymYwVS07yKiCSwNfKwqq0HbCVrXlhG/VDv6ecxEVjOgZDPAAAAAASUVORK5CYII="

@@ -30,7 +30,7 @@ const Product = (props) => {
             <Link to={`/product/${_id}`} className="flex flex-col items-center text-center group">
             <LazyLoad>
                 <div className="w-36 h-36">
-                    <img draggable="false" className="w-full h-full object-contain" src={images[0].url} alt={name} />
+                    <img loading="lazy" draggable="false" className="w-full h-full object-contain" src={images[0].url} alt={name} />
                 </div>
                 </LazyLoad>
                 <h2 className="text-sm mt-4 group-hover:text-primary-blue">{name.length > 50 ? `${name.substring(0, 50)}...` : name}</h2>

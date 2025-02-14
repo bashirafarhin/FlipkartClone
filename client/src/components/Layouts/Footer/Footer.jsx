@@ -182,7 +182,7 @@ const Footer = () => {
             </a>
 
             <span>&copy; 2007-{new Date().getFullYear()} Flipkart.com</span>
-            <img draggable="false" src={paymentMethods} alt="Card Payment" />
+            <img loading="lazy" draggable="false" src={paymentMethods} alt="Card Payment" />
           </div>
         </>
       )}

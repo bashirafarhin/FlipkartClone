@@ -19,7 +19,7 @@ const Cart = () => {
     if (!user) {
         return (
             <div className="flex flex-col items-center justify-center h-screen">
-                <img src='./cart.png'/>
+                <img loading="lazy" src='./cart.png'/>
                 <Link to="/login" className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                     Go to Login
                 </Link>
