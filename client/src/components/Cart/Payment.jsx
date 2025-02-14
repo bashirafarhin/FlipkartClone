@@ -49,7 +49,7 @@ const Payment = () => {
     e.preventDefault();
     setPayDisable(true);
     try {
-      const { data: order } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/payment/process`, paymentData, config);
+      const { data: order } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/payment/process`, paymentData, config);
       const options = {
         key: import.meta.env.VITE_RAZORPAY_KEY_ID,
         amount: order.amount,
@@ -67,7 +67,7 @@ const Payment = () => {
               order_id: response.razorpay_order_id,
               signature: response.razorpay_signature,
             };
-            let paymentResponse = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/callback`, paymentResult, config);
+            let paymentResponse = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/callback`, paymentResult, config);
             dispatch(getPaymentStatus(paymentResponse.data.order_id))
             navigate(`/order/${paymentResponse.data.order_id}`);
           } catch (error) {

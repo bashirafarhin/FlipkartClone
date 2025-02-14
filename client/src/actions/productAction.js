@@ -26,9 +26,9 @@ export const getProducts =
     (keyword = "", category, price = [0, 200000], ratings = 0, currentPage = 1) => async (dispatch) => {
         try {
             dispatch({ type: ALL_PRODUCTS_REQUEST });
-            let url = `${import.meta.env.VITE_BACKEND_URL}/products?keyword=${keyword}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}&page=${currentPage}`;
+            let url = `${import.meta.env.VITE_BACKEND_URL}/api/v1/products?keyword=${keyword}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}&page=${currentPage}`;
             if (category) {
-               url = `${import.meta.env.VITE_BACKEND_URL}/products?keyword=${keyword}&category=${category}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}&page=${currentPage}`;
+               url = `${import.meta.env.VITE_BACKEND_URL}/api/v1/products?keyword=${keyword}&category=${category}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}&page=${currentPage}`;
             }
             const res = await axios.get(url,config);
             dispatch({
@@ -47,7 +47,7 @@ export const getProducts =
 export const getSimilarProducts = (category) => async (dispatch) => {
     try {
         dispatch({ type: ALL_PRODUCTS_REQUEST });
-        const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/products?category=${category}`,config);
+        const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/products?category=${category}`,config);
         dispatch({
             type: ALL_PRODUCTS_SUCCESS,
             payload: data,
@@ -64,7 +64,7 @@ export const getSimilarProducts = (category) => async (dispatch) => {
 export const getProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAILS_REQUEST });
-        const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/product/${id}`,config);
+        const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/product/${id}`,config);
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
             payload: data.product,
@@ -81,7 +81,7 @@ export const getProductDetails = (id) => async (dispatch) => {
 export const newReview = (reviewData) => async (dispatch) => {
     try {
         dispatch({ type: NEW_REVIEW_REQUEST });
-        const res = await axios.put(`${import.meta.env.VITE_BACKEND_URL}/review`, reviewData, config);
+        const res = await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/v1/review`, reviewData, config);
         dispatch({
             type: NEW_REVIEW_SUCCESS,
             payload: res.data.success,
@@ -98,7 +98,7 @@ export const newReview = (reviewData) => async (dispatch) => {
 export const getSliderProducts = () => async (dispatch) => {
     try {
         dispatch({ type: SLIDER_PRODUCTS_REQUEST });
-        const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/products/all`, config);
+        const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/products/all`, config);
         dispatch({
             type: SLIDER_PRODUCTS_SUCCESS,
             payload: data.products,
