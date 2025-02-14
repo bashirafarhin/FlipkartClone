@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
+- [Demo](#demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Prerequisites](#prerequisites)
@@ -11,7 +12,9 @@
 
 ## Overview
 This is a clone of the original [Flipkart app](https://www.flipkart.com/).
-https://github.com/user-attachments/assets/b9592740-1568-472d-9414-83262f6f713d
+
+## Demo
+https://github.com/user-attachments/assets/cd2ce4ff-fe8d-4ed6-8f4e-06f2290add8f
 
 ## Features
 - Authentication using local login
