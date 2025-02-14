@@ -1,0 +1,1 @@
+const n=(t,e)=>((e-t)/e*100).toFixed(),r=()=>{const t=new Date;return t.setDate(new Date().getDate()+7),t.toUTCString().substring(0,11)},s=t=>new Date(t).toUTCString().substring(0,16),a=(t,e)=>t.sort(()=>.5-Math.random()).slice(0,e);export{r as a,a as b,s as f,n as g};
