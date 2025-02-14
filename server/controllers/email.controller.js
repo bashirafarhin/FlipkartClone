@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport(
 export const sendEmail = async (options) => {
 
   let mailOptions = {
-    from: "bashira.farhin.ug21@nsut.ac.in",
+    from: process.env.ADMIN_EMAIL,
     to: options.email,
     subject: options.subject || "Notification from Our Service",
     html: "",

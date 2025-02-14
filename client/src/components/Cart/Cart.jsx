@@ -19,7 +19,6 @@ const Cart = () => {
     if (!user) {
         return (
             <div className="flex flex-col items-center justify-center h-screen">
-                {/* <p className="text-lg font-medium">You need to log in to view your cart.</p> */}
                 <img src='./cart.png'/>
                 <Link to="/login" className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">
                     Go to Login

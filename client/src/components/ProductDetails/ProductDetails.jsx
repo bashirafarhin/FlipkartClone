@@ -318,7 +318,7 @@ const ProductDetails = () => {
                                             <DialogTitle className="border-b">Submit Review</DialogTitle>
                                             <DialogContent className="flex flex-col m-1 gap-4">
                                                 <Rating
-                                                    onChange={(e) => setRating(e.target.value)}
+                                                    onChange={(e) => setRating(Number(e.target.value))}
                                                     value={rating}
                                                     size='large'
                                                     precision={0.5}

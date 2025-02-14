@@ -1,17 +1,15 @@
 import axios from "axios";
 import { ADD_TO_WISHLIST, REMOVE_FROM_WISHLIST } from "../constants/wishlistConstants";
-import baseurl from "../urlconfig"
 
 const config = {
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("flipkart-token")}`,
     },
     withCredentials: true,
 };
 // Add To Wishlist
 export const addToWishlist = (id) => async (dispatch, getState) => {
-    const { data } = await axios.get(`${baseurl}/product/${id}`, config);
+    const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/product/${id}`, config);
     dispatch({
         type: ADD_TO_WISHLIST,
         payload: {

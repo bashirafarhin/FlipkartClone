@@ -25,20 +25,19 @@ import {
   RESET_PASSWORD_REQUEST,
 } from "../constants/userConstants";
 import axios from "axios";
-import baseurl from "../urlconfig";
 
 const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-    withCredentials: true,
+  headers: {
+    "Content-Type": "application/json",
+  },
+  withCredentials: true,
 };
 // Login User
 export const loginUser = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_USER_REQUEST });
     const { data } = await axios.post(
-      `${baseurl}/login`,
+      `${import.meta.env.VITE_BACKEND_URL}/login`,
       { email, password },
       config
     );
@@ -58,7 +57,11 @@ export const loginUser = (email, password) => async (dispatch) => {
 export const registerUser = (userData) => async (dispatch) => {
   try {
     dispatch({ type: REGISTER_USER_REQUEST });
-    const { data } = await axios.post(`${baseurl}/register`, userData, config);
+    const { data } = await axios.post(
+      `${import.meta.env.VITE_BACKEND_URL}/register`,
+      userData,
+      config
+    );
     dispatch({
       type: REGISTER_USER_SUCCESS,
       payload: data.user,
@@ -75,7 +78,10 @@ export const registerUser = (userData) => async (dispatch) => {
 export const loadUser = () => async (dispatch) => {
   try {
     dispatch({ type: LOAD_USER_REQUEST });
-    const { data } = await axios.get(`${baseurl}/me`, config);
+    const { data } = await axios.get(
+      `${import.meta.env.VITE_BACKEND_URL}/me`,
+      config
+    );
     dispatch({
       type: LOAD_USER_SUCCESS,
       payload: data.user,
@@ -91,7 +97,7 @@ export const loadUser = () => async (dispatch) => {
 // Logout User
 export const logoutUser = () => async (dispatch) => {
   try {
-    await axios.get(`${baseurl}/logout`, config);
+    await axios.get(`${import.meta.env.VITE_BACKEND_URL}/logout`, config);
     dispatch({ type: LOGOUT_USER_SUCCESS });
   } catch (error) {
     dispatch({
@@ -105,7 +111,11 @@ export const logoutUser = () => async (dispatch) => {
 export const updateProfile = (userData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PROFILE_REQUEST });
-    const { data } = await axios.put(`${baseurl}/me/update`, userData, config);
+    const { data } = await axios.put(
+      `${import.meta.env.VITE_BACKEND_URL}/me/update`,
+      userData,
+      config
+    );
     dispatch({
       type: UPDATE_PROFILE_SUCCESS,
       payload: data.success,
@@ -122,7 +132,11 @@ export const updateProfile = (userData) => async (dispatch) => {
 export const updatePassword = (passwords) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PASSWORD_REQUEST });
-    const { data } = await axios.put(`${baseurl}/password/update`, passwords, config);
+    const { data } = await axios.put(
+      `${import.meta.env.VITE_BACKEND_URL}/password/update`,
+      passwords,
+      config
+    );
     dispatch({
       type: UPDATE_PASSWORD_SUCCESS,
       payload: data.success,
@@ -139,7 +153,11 @@ export const updatePassword = (passwords) => async (dispatch) => {
 export const forgotPassword = (email) => async (dispatch) => {
   try {
     dispatch({ type: FORGOT_PASSWORD_REQUEST });
-    const { data } = await axios.post(`${baseurl}/password/forgot`, email, config);
+    const { data } = await axios.post(
+      `${import.meta.env.VITE_BACKEND_URL}/password/forgot`,
+      email,
+      config
+    );
     dispatch({
       type: FORGOT_PASSWORD_SUCCESS,
       payload: data.message,
@@ -157,7 +175,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
   try {
     dispatch({ type: RESET_PASSWORD_REQUEST });
     const { data } = await axios.put(
-      `${baseurl}/password/reset/${token}`,
+      `${import.meta.env.VITE_BACKEND_URL}/password/reset/${token}`,
       passwords,
       config
     );

@@ -1,17 +1,15 @@
 import axios from "axios"
 import { ADD_TO_CART, EMPTY_CART, REMOVE_FROM_CART, SAVE_SHIPPING_INFO } from "../constants/cartConstants";
-import baseurl from "../urlconfig"
 
 const config = {
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("flipkart-token")}`,
     },
     withCredentials: true,
 };
 
 export const addItemsToCart = (id, quantity = 1) => async (dispatch, getState) => {
-    const { data } = await axios.get(`${baseurl}/product/${id}`,config);
+    const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/product/${id}`,config);
 
     dispatch({
         type: ADD_TO_CART,
