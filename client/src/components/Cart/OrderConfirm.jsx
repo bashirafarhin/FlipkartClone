@@ -4,6 +4,7 @@ import PriceSidebar from './PriceSidebar';
 import Stepper from './Stepper';
 import { useNavigate } from 'react-router-dom';
 import MetaData from '../Layouts/MetaData';
+import Policy from '../../Policy/Policy';
 
 const OrderConfirm = () => {
     const navigate = useNavigate();
@@ -30,6 +31,7 @@ const OrderConfirm = () => {
                             <button onClick={() => { navigate('/process/payment') }} className="bg-primary-orange px-6 py-2 text-white font-medium rounded-sm shadow hover:shadow-lg uppercase">continue</button>
                         </div>
                     </Stepper>
+                    <Policy/>
                 </div>
 
                 <PriceSidebar cartItems={cartItems} />

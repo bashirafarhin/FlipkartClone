@@ -27,6 +27,11 @@ const MyOrders = React.lazy(() => import('./components/Order/MyOrders'));
 const OrderDetails = React.lazy(() => import('./components/Order/OrderDetails'));
 const Wishlist = React.lazy(() => import('./components/Wishlist/Wishlist'));
 const NotFound = React.lazy(() => import('./components/NotFound'));
+const Terms = React.lazy(() => import('./Policy/Terms'));
+const Privacy = React.lazy(() => import('./Policy/Privacy'));
+const ShippingPolicy = React.lazy(() => import('./Policy/ShippingPolicy'));
+const Contact = React.lazy(() => import('./Policy/Contact'));
+const Refunds = React.lazy(() => import('./Policy/Refunds'));
 
 function App() {
   const dispatch = useDispatch();
@@ -192,6 +197,11 @@ function App() {
           </ProtectedRoute>
           </Suspense>
         } ></Route>
+        <Route path="/terms" element={<Suspense fallback={<div>Loading...</div>}><Terms /></Suspense>} />
+        <Route path="/privacy" element={<Suspense fallback={<div>Loading...</div>}><Privacy /></Suspense>} />
+        <Route path="/shippingpolicy" element={<Suspense fallback={<div>Loading...</div>}><ShippingPolicy /></Suspense>} />
+        <Route path="/contact" element={<Suspense fallback={<div>Loading...</div>}><Contact /></Suspense>} />
+        <Route path="/refunds" element={<Suspense fallback={<div>Loading...</div>}><Refunds /></Suspense>} />
         <Route path="*" element=  {<Suspense fallback={<div>Loading...</div>}> <NotFound />  </Suspense>}></Route>
       </Routes>
       <Suspense fallback={<div>Loading...</div>}>

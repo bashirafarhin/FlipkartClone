@@ -16,6 +16,7 @@ import { newOrder } from '../../actions/orderAction';
 import { emptyCart } from '../../actions/cartAction';
 import useRazorpay from "react-razorpay";
 import { getPaymentStatus } from '../../actions/orderAction';
+import Policy from '../../Policy/Policy';
 
 const config = {
   headers: {
@@ -156,6 +157,7 @@ const Payment = () => {
                 </form>
               </div>
             </Stepper>
+            <Policy/>
           </div>
           <PriceSidebar cartItems={cartItems} />
         </div>

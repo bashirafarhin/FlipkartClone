@@ -1,1 +1,0 @@
-import{j as r}from"./index-CdWlI4-n.js";import{C as e}from"./CircularProgress-Cn7D70x5.js";const i=()=>r.jsx("div",{className:"min-h-screen min-w-full flex items-center justify-center",children:r.jsx(e,{})});export{i as L};

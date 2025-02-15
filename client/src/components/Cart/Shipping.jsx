@@ -12,6 +12,7 @@ import { saveShippingInfo } from '../../actions/cartAction';
 import { useNavigate } from 'react-router-dom';
 import MetaData from '../Layouts/MetaData';
 import states from '../../utils/states';
+import Policy from '../../Policy/Policy';
 
 const Shipping = () => {
 
@@ -136,6 +137,7 @@ const Shipping = () => {
                                 </form>
                             </div>
                         </Stepper>
+                        <Policy/>
                     </div>
 
                     <PriceSidebar cartItems={cartItems} />
