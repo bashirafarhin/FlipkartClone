@@ -7,7 +7,7 @@ const config = {
     },
     withCredentials: true,
 };
-// Add To Wishlist
+
 export const addToWishlist = (id) => async (dispatch, getState) => {
     const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/product/${id}`, config);
     dispatch({
@@ -25,7 +25,6 @@ export const addToWishlist = (id) => async (dispatch, getState) => {
     localStorage.setItem('wishlistItems', JSON.stringify(getState().wishlist.wishlistItems))
 }
 
-// Remove From Wishlist
 export const removeFromWishlist = (id) => async (dispatch, getState) => {
     dispatch({
         type: REMOVE_FROM_WISHLIST,

@@ -23,7 +23,7 @@ const Contact = () => {
         <Typography variant="body1" className="text-gray-700 mb-4 text-center">
           Have questions or need help? Fill out the form below or email us at
           <a
-            href="mailto:bashira.farhin.ug21@nsut.ac.in"
+            href="mailto:xyz@gmail.com"
             className="text-blue-600 font-medium pl-1"
           >
             {import.meta.env.VITE_ADMIN_EMAIL}
