@@ -2,13 +2,11 @@ import Razorpay from 'razorpay';
 import Payment from '../database/models/payment.model.js';
 import { ErrorHandler } from '../utils/errorHandler.js';
 
-// Configure Razorpay
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
-// Process Payment
 export const processPayment = async (req, res, next) => {
   const { amount, email, phoneNo } = req.body;
   const options = {
@@ -40,7 +38,7 @@ export const verifyPayment = async (req, res, next) => {
       const data = {
         txnId: payment.id,
         orderId: payment.order_id,
-        txnAmount: payment.amount/100 , 
+        txnAmount: payment.amount/100, 
         bankName:payment.bank,
         paymentMode:payment.method,
         refundAmt:payment.amount_refunded,

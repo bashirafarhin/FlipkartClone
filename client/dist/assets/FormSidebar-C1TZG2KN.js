@@ -1,0 +1,1 @@
+import{j as e}from"./index-Br3W-CJe.js";const x=({title:r,tag:s})=>e.jsxs("div",{className:"loginSidebar bg-primary-blue px-9 py-10 hidden sm:flex flex-col gap-4 w-2/5",children:[e.jsx("h1",{className:"font-medium text-white text-3xl",children:r}),e.jsx("p",{className:"text-gray-200 text-lg pr-2",children:s})]});export{x as F};

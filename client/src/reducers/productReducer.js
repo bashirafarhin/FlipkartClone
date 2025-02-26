@@ -106,7 +106,6 @@ export const productDetailsReducer = (state = { product: {} }, { type, payload }
     }
 }
 
-// New Review Reducer
 export const newReviewReducer = (state = {}, { type, payload }) => {
     switch (type) {
         case NEW_REVIEW_REQUEST:
@@ -140,7 +139,6 @@ export const newReviewReducer = (state = {}, { type, payload }) => {
     }
 }
 
-// New Product Reducer
 export const newProductReducer = (state = { product: {} }, { type, payload }) => {
     switch (type) {
         case NEW_PRODUCT_REQUEST:
@@ -175,7 +173,6 @@ export const newProductReducer = (state = { product: {} }, { type, payload }) =>
     }
 }
 
-// New Product Reducer
 export const productReducer = (state = {}, { type, payload }) => {
     switch (type) {
         case UPDATE_PRODUCT_REQUEST:

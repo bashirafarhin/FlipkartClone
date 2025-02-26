@@ -1,0 +1,1 @@
+import{j as t,N as e}from"./index-Br3W-CJe.js";import{u as a}from"./useSelector-NGf-tHxd.js";const m=({children:r,isAdmin:o})=>{const{loading:s,isAuthenticated:i,user:n}=a(u=>u.user);return s?null:i?o&&n.role!=="admin"?t.jsx(e,{to:"/login"}):r:t.jsx(e,{to:"/login"})};export{m as default};

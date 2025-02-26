@@ -5,7 +5,6 @@ export const wishlistReducer = (state = { wishlistItems: [] }, { type, payload }
         case ADD_TO_WISHLIST:
             const item = payload;
             const itemExist = state.wishlistItems.find((i) => i.product === item.product);
-
             if (itemExist) {
                 return {
                     ...state,
