@@ -10,27 +10,27 @@ const SecondaryDropDownMenu = () => {
         {
             title: "Notification Preferences",
             icon: <NotificationsIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
+            redirect: "#",
         },
         {
             title: "Sell on Flipkart",
             icon: <BusinessCenterIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
+            redirect: "#",
         },
         {
             title: "24x7 Customer Care",
             icon: <LiveHelpIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
+            redirect: "#",
         },
         {
             title: "Advertise",
             icon: <TrendingUpIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
+            redirect: "#",
         },
         {
             title: "Download App",
             icon: <DownloadIcon sx={{ fontSize: "18px" }} />,
-            redirect: "/",
+            redirect: "#",
         },
     ]
 

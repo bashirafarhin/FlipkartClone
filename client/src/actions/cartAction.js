@@ -10,7 +10,6 @@ const config = {
 
 export const addItemsToCart = (id, quantity = 1) => async (dispatch, getState) => {
     const { data } = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/product/${id}`,config);
-
     dispatch({
         type: ADD_TO_CART,
         payload: {
