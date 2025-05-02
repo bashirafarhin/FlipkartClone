@@ -5,6 +5,7 @@ import { asyncErrorHandler } from './asyncErrorHandler.middleware.js';
 
 export const isAuthenticatedUser = asyncErrorHandler(async (req, res, next) => {
     const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
+    console.log("Token: ", token);
     if (!token) {
         return next(new ErrorHandler("Please Login to Access", 401))
     }

@@ -54,7 +54,7 @@ const Product = (props) => {
             </div>
             {/* <!-- product description --> */}
             {/* <!-- wishlist badge --> */}
-            <span onClick={addToWishlistHandler} className={`${itemInWishlist ? "text-red-500" : "hover:text-red-500 text-gray-300"} absolute top-5 right-2 cursor-pointer`}><FavoriteIcon sx={{ fontSize: "16px" }} /></span>
+            <span onClick={addToWishlistHandler} className={`${itemInWishlist ? "text-red-500" : "hover:text-red-500 text-gray-400"} absolute top-5 right-2 cursor-pointer`}><FavoriteIcon sx={{ fontSize: "20px" }} /></span>
             {/* <!-- wishlist badge --> */}
 
         </div>
