@@ -59,9 +59,7 @@ export const loginUser = asyncErrorHandler(async (req, res, next) => {
 
 // Logout User
 export const logoutUser = asyncErrorHandler(async (req, res, next) => {
-  res.clearCookie("token", {
-    expires: new Date(Date.now()),
-  });
+  res.clearCookie("token");
   res.status(200).json({
     success: true,
     message: "Logged Out",
