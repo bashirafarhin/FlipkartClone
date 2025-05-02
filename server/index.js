@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.set("trust proxy", 1);
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload({ useTempFiles: true, tempFileDir: "/tmp/" }));
-app.use(cors({ credentials: true, origin: true, withCredentials: true }));
+app.use(cors({ origin: true, withCredentials: true }));
 
 import user from "./routes/user.route.js";
 import product from "./routes/product.route.js";
