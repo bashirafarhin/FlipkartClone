@@ -14,7 +14,7 @@
 This is a clone of the original [Flipkart app](https://www.flipkart.com/).
 
 ## Demo
-https://github.com/user-attachments/assets/cd2ce4ff-fe8d-4ed6-8f4e-06f2290add8f
+https://www.loom.com/share/7b7fd5b10ae246fc943490b7c040bd48?sid=d9ed8408-cd94-4066-bead-7ba3b576a879
 
 ## Features
 - Authentication using local login
